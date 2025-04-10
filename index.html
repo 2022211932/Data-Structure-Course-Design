@@ -1,57 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>通用地图导航系统</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript">
-        window._AMapSecurityConfig = {
-            securityJsCode: '04d2fb8702e0a6f87e8361662fd3bf17',
-        }
-    </script>
-    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=2f7fe6c5535461df37016bcdab43b2d4&plugin=AMap.Scale,AMap.ToolBar,AMap.DistrictSearch,AMap.PlaceSearch,AMap.Geocoder,AMap.AutoComplete"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个性化旅游系统</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>通用地图导航系统</h1>
-        <div class="search-container">
-            <input type="text" id="location-search" placeholder="输入地点名称 (例如: 故宫博物院)">
-            <button id="search-button">搜索</button>
-            <button id="use-current-location">使用当前位置</button>
-        </div>
-        <div class="main-content">
-            <div id="map-container"></div>
-            <div class="sidebar">
-                <div class="point-info">
-                    <h3>点位信息</h3>
-                    <div class="input-group">
-                        <label for="point-name">地点名称:</label>
-                        <input type="text" id="point-name" placeholder="输入点名称">
-                    </div>
-                    <div class="mode-buttons">
-                        <button id="add-point-mode" class="active">添加点</button>
-                        <button id="add-edge-mode">连接点</button>
-                        <button id="delete-point-mode">删除点</button>
-                        <button id="path-mode">路径规划</button>
-                    </div>
-                    <div class="action-buttons">
-                        <button id="save-data">保存数据</button>
-                        <button id="load-data">加载数据</button>
-                        <button id="add-edge-manually">手动添加边</button>
-                        <button id="reset-view">重置视图</button>
-                    </div>
-                </div>
-                <div class="data-display">
-                    <h3>点位列表</h3>
-                    <div id="points-list" class="list-container"></div>
-                    <h3>路径信息</h3>
-                    <div id="path-info" class="info-container"></div>
-                </div>
-                <div id="status-message" class="status-message"></div>
-            </div>
-        </div>
-    </div>
-    <script src="navigator.js"></script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
-</html>
+</html> 
